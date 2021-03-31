@@ -6,7 +6,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-eHpo1-GithubSync
+    types: sync-787a68-GithubSync
 jobs:
   repo-sync:
     env:
@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync eHpo1-GithubSync
+      - name: sync 787a68-GithubSync
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
