@@ -6,7 +6,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-787a68-GithubSync
+    types: sync-787a68-Rules
 jobs:
   repo-sync:
     env:
@@ -18,11 +18,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync 787a68-GithubSync
+      - name: sync 787a68-Rules
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/787a68/Rules/GithubSync.git"
+          source_repo: "https://github.com/787a68/Rules/Rules.git"
           source_branch: "master"
           destination_branch: "eHpo1"
           github_token: ${{ secrets.PAT }}
